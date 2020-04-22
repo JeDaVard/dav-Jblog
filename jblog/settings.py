@@ -25,7 +25,7 @@ SECRET_KEY = 'wsg&^!b05qb^dunij%2r7#%&3pw9k#5cf)n9q+_dsbehm9^68y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dav-jblog-python.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -122,3 +122,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
